@@ -2,12 +2,30 @@ package main
 
 import (
 	"github.com/gin-gonic/gin"
-	"github.com/tonysprite/Mygobin/controller"
 )
 
 func main() {
 	r := gin.Default()
-	r.GET("/ping", login})
-
+	r.POST("/login", login)
+	r.POST("/regist", regist)
+	r.GET("/home", home)
 	r.Run()
+}
+
+func login(c *gin.Context) {
+	c.JSON(200, gin.H{
+		"message": "ok",
+	})
+}
+
+func regist(c *gin.Context) {
+	c.JSON(200, gin.H{
+		"message": "ok",
+	})
+}
+
+func home(c *gin.Context) {
+	c.JSON(200, gin.H{
+		"message": "ok",
+	})
 }
