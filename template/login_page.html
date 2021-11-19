@@ -1,0 +1,50 @@
+<html>
+<header>
+    <style>
+        div{
+            margin:20px
+        }
+        input{
+            margin:10px;
+            line-height: 30px;
+            height:30px;
+            
+        }
+        .button{
+            width:100px;
+        }
+
+        .input{
+            width:300px
+        }
+        h3{
+            text-align: left;
+            margin:10px;
+            padding-left:100px
+        }
+    </style>
+</header>
+
+<body>
+    <h3>登陆页面</h3>
+    <form method="post" action="/login">
+        <div>
+            <input class="input" type="text" name="user_name" value="" placeholder="用户名" />
+        </div>
+        <div>
+            <input class="input" type="password" name="password" value="" placeholder="登陆密码" />
+        </div>
+        <div>
+            <input class="button" type="submit" value="登陆" />
+            <input class="button" type="button" value="注册" onclick="jumpRegist()" />
+        </div>
+    </form>
+</body>
+<script>
+    function jumpRegist()
+    {
+        window.location.href="/regist_page";
+    }
+</script>
+
+</html>
