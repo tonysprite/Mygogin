@@ -3,6 +3,8 @@ package main
 import (
 	"net/http"
 
+	_ "github.com/tonysprite/Mygogin/models"
+
 	"github.com/gin-gonic/gin"
 )
 
@@ -72,7 +74,7 @@ func home_page(c *gin.Context) {
 }
 
 func login(c *gin.Context) {
-	var user user_login
+	var user = new(User)
 	if c.BindJSON(&user) == nil {
 		c.JSON(200, gin.H{
 			"code":    0,
